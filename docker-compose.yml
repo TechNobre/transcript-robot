@@ -1,0 +1,19 @@
+services:
+
+  transcript-robot:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: technobre/transcript-robot
+    container_name: transcript-robot
+    environment:
+      #- IN_MOVIE=long-video.ts
+      - IN_MOVIE=movie-pt-PT.mp4
+      - IN_MOVIE_LANG=pt-PT
+      - OUT_TRANSCRIPT=transcript.txt
+      - CHUNK_SIZE=60
+      - OVERLAP_DURATION=2
+    volumes:
+      - ./data/in-data/:/data/in-data:ro
+      - ./data/out-data/:/data/out-data:rw
+      - ./data/tmp-data/:/data/tmp-data:rw
