@@ -1,5 +1,8 @@
 # Transcript robot
 
+This project is a tool that generates transcripts from movies.
+The idea is create a tool that can generate transcripts from movies from multiple sources as files, youtube, etc.
+
 
 ## Configurations
 

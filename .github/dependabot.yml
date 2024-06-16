@@ -1,0 +1,15 @@
+version: 2
+updates:
+
+  - package-ecosystem: "github-actions"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "daily"
+    assignees:
+      - "NelsonBN"
+    reviewers:
+      - "NelsonBN"
+    commit-message:
+      prefix: "build"
+      include: "scope"
+    target-branch: "main"
